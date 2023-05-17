@@ -81,36 +81,36 @@ const ERC721 = () => {
       <div className="card">
         <h3 className="title">3. ERC721</h3>
         <p className="desc">
-          <Image
+          {/* <Image
             src={nft0?.metadata.image}
             width={100}
             height={100}
             alt={nft0?.metadata.name}
-          />
+          /> */}
           Owner: {nft0?.owner} <br />
           Type: {nft0?.type} <br />
           Supply: {nft0?.supply} <br />
           Description: {nft0?.metadata.description}
         </p>
         <p className="desc ">
-          <Image
+          {/* <Image
             src={nft1?.metadata.image}
             width={100}
             height={100}
             alt={nft1?.metadata.name}
-          />
+          /> */}
           Owner: {nft1?.owner} <br />
           Type: {nft1?.type} <br />
           Supply: {nft1?.supply} <br />
           Description: {nft1?.metadata.description}
         </p>
         <p className="desc ">
-          <Image
+          {/* <Image
             src={nft2?.metadata.image}
             width={100}
             height={100}
             alt={nft2?.metadata.name}
-          />
+          /> */}
           Owner: {nft2?.owner} <br />
           Type: {nft2?.type} <br />
           Supply: {nft2?.supply} <br />

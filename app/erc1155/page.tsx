@@ -21,7 +21,10 @@ const ERC1155 = () => {
   const address = useAddress()
 
   // 1. Get contract
-  const { contract, isLoading: i0 } = useContract(contractAddress)
+  const { contract, isLoading: i0 } = useContract(
+    contractAddress,
+    'edition-drop'
+  )
 
   // 2. ContractMetadata
   const {
@@ -33,11 +36,11 @@ const ERC1155 = () => {
 
   // 3. ERC1155
   // Airdrop NFTs to a list of wallets
-  const {
-    mutate: airdropNFT,
-    isLoading: i3,
-    error: e3,
-  } = useAirdropNFT(contract)
+  // const {
+  //   mutate: airdropNFT,
+  //   isLoading: i3,
+  //   error: e3,
+  // } = useAirdropNFT(contract)
 
   // Get a single NFT
   const tokenId = 0 // the tokenId to look up
@@ -89,19 +92,19 @@ const ERC1155 = () => {
           Fee Recipient: {contractMetadata?.fee_recipient} <br />
           Seller Fee Basic Points: {contractMetadata?.seller_fee_basis_points}
           <br />
-          <Image
+          {/* <Image
             src={contractMetadata?.image}
             width={100}
             height={100}
             alt={contractMetadata?.name}
-          />
+          /> */}
         </p>
       </div>
 
       <div className="card">
         <h3 className="title">3. ERC1155</h3>
         <p className="desc">
-          <button
+          {/* <button
             className="button"
             disabled={i3}
             onClick={() =>
@@ -116,8 +119,8 @@ const ERC1155 = () => {
             }
           >
             Airdrop NFT from {address} to Address2, Address3
-          </button>
-          <br />
+          </button> */}
+          {/* <br /> */}
           Owner balance of {address} : {ownerBalance?.toNumber()}
           <br />
           <button

@@ -1,6 +1,7 @@
 'use client'
 
 import {
+  ThirdwebNftMedia,
   useActiveListings,
   useAddress,
   useContract,
@@ -72,12 +73,12 @@ export default function Marketplace() {
         <p className="desc">
           Name: {contractMetadata?.name} <br />
           Description: {contractMetadata?.description} <br />
-          <Image
+          {/* <Image
             src={contractMetadata?.image}
             width={100}
             height={100}
             alt={contractMetadata?.name}
-          />
+          /> */}
         </p>
       </div>
 
@@ -87,12 +88,13 @@ export default function Marketplace() {
           {listings?.map((item) => {
             return (
               <div key={item.id}>
-                <Image
+                <ThirdwebNftMedia metadata={item.asset} height="50" />
+                {/* <img
                   src={item.asset.image}
                   width={100}
                   height={100}
                   alt={item.asset.name}
-                />
+                /> */}
                 {item.asset.name} <br />
                 {item.asset.description} <br />
                 price: {item.buyoutPrice.toString()}
