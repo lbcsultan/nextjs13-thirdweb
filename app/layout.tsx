@@ -1,7 +1,12 @@
+'use client'
 import './globals.css'
 import { Inter } from 'next/font/google'
+import { ThirdwebProvider } from '@thirdweb-dev/react'
+import Navbar from '@/components/Navbar'
 
 const inter = Inter({ subsets: ['latin'] })
+
+const activeChain = 'mumbai'
 
 export const metadata = {
   title: 'Create Next App',
@@ -15,7 +20,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <ThirdwebProvider activeChain={activeChain}>
+          <Navbar />
+          {children}
+        </ThirdwebProvider>
+      </body>
     </html>
   )
 }

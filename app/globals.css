@@ -25,3 +25,23 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.menuitem {
+  @apply text-2xl font-bold hover:text-red-700 px-4 py-2;
+}
+
+.card {
+  @apply p-2 m-2 bg-slate-300 hover:bg-slate-400;
+}
+
+.title {
+  @apply text-xl font-bold text-red-900;
+}
+
+.desc {
+  @apply px-3 mx-5;
+}
+
+.button {
+  @apply bg-yellow-500 hover:bg-yellow-600 rounded-lg px-2 mx-2;
+}
